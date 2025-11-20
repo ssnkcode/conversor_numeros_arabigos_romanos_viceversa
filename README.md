@@ -13,19 +13,19 @@ Una API REST para convertir números arábigos a romanos y viceversa.
 ## Instalación
 
 1. Instalar dependencias:
-\`\`\`bash
+\\\bash
 npm install
-\`\`\`
+\\\
 
 2. Ejecutar en desarrollo:
-\`\`\`bash
+\\\bash
 npm run dev
-\`\`\`
+\\\
 
 3. Ejecutar en producción:
-\`\`\`bash
+\\\bash
 npm start
-\`\`\`
+\\\
 
 ## Endpoints
 
