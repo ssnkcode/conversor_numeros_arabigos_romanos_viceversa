@@ -18,7 +18,16 @@ app.use((req, res, next) => {
 // Ruta: Arábigo a Romano
 app.get('/a2r', (req, res) => {
     try {
-        const arabic = parseInt(req.query.arabic);
+        const arabicParam = req.query.arabic;
+        const arabic = parseInt(arabicParam);
+        
+        // Validar que sea solo números
+        if (arabicParam && !/^-?\d+$/.test(arabicParam)) {
+            return res.status(400).json({
+                error: 'Parámetro "arabic" inválido',
+                message: 'El parámetro "arabic" debe ser un número entero válido'
+            });
+        }
         
         if (!req.query.arabic || isNaN(arabic)) {
             return res.status(400).json({
